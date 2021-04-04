@@ -1,4 +1,5 @@
 import os
+import sys
 from maraboupy import Marabou
 from maraboupy import MarabouCore
 import numpy as np
@@ -42,7 +43,7 @@ def set_constraints(network, inputVars, outputVars, target):
 
 
 
-targets = ['square', 'cosine', 'log']
+targets = ['square', 'cosine', 'inverse']
 model_dirs = []
 model_stats = {}
 

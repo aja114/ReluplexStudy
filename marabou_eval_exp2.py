@@ -1,4 +1,5 @@
 import os
+import sys
 from maraboupy import Marabou
 from maraboupy import MarabouCore
 import numpy as np
@@ -47,16 +48,16 @@ def set_constraints(network, inputVars, outputVars, target):
 		network.setUpperBound(outputVars, -0.5)
 
 
-targets = ['square', 'cosine', 'log']
+targets = ['square', 'cosine', 'inverse']
 model_dirs = []
 model_stats = {}
 
-if not os.path.exists('models'):
+if not os.path.exists('models_exp2'):
 	print("no models repository")
 	sys.exit(2)
 
 for target in targets:
-	path = os.path.join('models', f'model_{target}')
+	path = os.path.join('models_exp2', f'model_{target}')
 	if not os.path.exists(path):
 		print(f'models for target {target} don\'t exist')
 	else:

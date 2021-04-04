@@ -1,4 +1,5 @@
 import os
+import sys
 from maraboupy import Marabou
 import numpy as np
 import pandas as pd
@@ -11,7 +12,7 @@ def set_constraints(network, inputVars, outputVars, target):
 		network.setUpperBound(inputVars[0], 10.0)
 
 		# Set output interval
-        network.setLowerBound(outputVars[0], -10)
+		network.setLowerBound(outputVars[0], -10)
 		network.setUpperBound(outputVars[0], -0.5)
 
 targets = ['square']
