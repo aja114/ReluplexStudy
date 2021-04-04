@@ -15,7 +15,7 @@ outputVars = network.outputVars[0]
 print("inputVars: ", inputVars)
 print("outputVars: ", outputVars)
 
-network.setLowerBound(inputVars[0], -10.0)
+network.setLowerBound(inputVars[0], 0.0)
 network.setUpperBound(inputVars[0], 10.0)
 
 print(network.evaluateWithMarabou(np.array([0.0])))
